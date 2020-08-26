@@ -1,0 +1,26 @@
+{
+  "$schema": "https://deno.land/x/denon/schema.json",
+  "scripts": {
+    "start": {
+      "cmd": "deno run --allow-all -c tsconfig.json server.ts",
+      "desc": "run my app.ts file",
+      "allow": [
+        "env",
+        "net",
+        "read",
+        "write"
+      ],
+      "unstable": true,
+      "env": {
+        "PORT": "8000"
+      }
+    }
+  },
+  "watcher": {
+    "interval": 350,
+    "exts": ["js", "jsx", "ts", "tsx", "json"],
+    "match": ["*.*"],
+    "skip": ["*/.git/*"],
+    "legacy": false
+  }
+}
